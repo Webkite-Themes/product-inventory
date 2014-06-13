@@ -60,14 +60,9 @@
                   <span class="webkite-sale-label xs-exclude sm-exclude">&nbsp;</span>
                 {{/if}}
       
-                {{#if (find facets name="Price")~}}
-                  {{#facet name="Price"}}
-                    <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
-                  {{/facet}}
-                  {{#facet name="Unit"~}}
-                    <span class="webkite-price-unit">{{displayValue}}</span>
-                  {{~/facet}}
-                {{/if}}
+                {{#facet name="Price"}}
+                  <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
+                {{/facet}}
               </div>
               
               {{#any (find facets name="Brand") (find facets name="Availability")}}
@@ -124,14 +119,9 @@
                 <span class="webkite-sale-label xs-exclude sm-exclude">&nbsp;</span>
               {{/if}}
     
-              {{#if (find facets name="Price")~}}
-                {{#facet name="Price"}}
-                  <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
-                {{/facet}}
-                {{#facet name="Unit"~}}
-                  <span class="webkite-price-unit">{{displayValue}}</span>
-                {{~/facet}}
-              {{/if}}
+              {{#facet name="Price"}}
+                <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
+              {{/facet}}
             </div>
             
             {{#any (find facets name="Brand") (find facets name="Availability")}}
