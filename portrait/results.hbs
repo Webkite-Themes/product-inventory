@@ -1,0 +1,76 @@
+{{log this}}
+
+{{>header}}
+
+{{#if items.length~}}
+  {{#each this.items~}}
+    <div id="{{this.id}}" class="webkite-item-details webkite-modal">{{>results-modal}}</div>
+  {{/each}}
+  <div class="webkite-results-wrapper">
+    {{~#each this.items~}}
+      <section class="webkite-result">
+             
+        {{#facet name="Image URL"}}<div class="webkite-image-wrapper" style="background-image:url('{{displayValue}}');"><img src="{{displayValue}}"/></div>{{/facet~}}
+            
+        <div class="webkite-result-body">
+          {{#facet name="Name"~}}
+            <h2 class="webkite-item-title">{{displayValue}}</h2>
+          {{~/facet}}
+
+          {{#any (find facets name="Category") (find facets name="Sub-Category")}}
+            <div class="webkite-categories">
+              {{~#facet name="Category"}}
+                <span class="facet-values webkite-category">
+                  {{~#if filterable}}
+                    {{~#each values~}}
+                      <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
+                      {{~#unless @last}}, {{/unless~}}
+                    {{~/each}}
+                  {{~else}}
+                    {{displayValue}}
+                  {{/if}}
+                </span>
+              {{~/facet~}}
+              {{~#facet name="Sub-Category"}}
+                <span class="facet-values webkite-subcategory">
+                  {{~#if filterable}}
+                    {{~#each values~}}
+                      <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
+                      {{~#unless @last}}, {{/unless~}}
+                    {{~/each}}
+                  {{~else}}
+                    {{displayValue}}
+                  {{/if}}
+                </span>
+              {{~/facet~}}
+            </div>
+          {{/any}}
+          
+          {{#facet name="Description"~}}
+            <p class="webkite-description">{{truncate displayValue 110 wrap=true}}</p>
+          {{~/facet}}
+          
+          {{#any (find facets name="Price") (find facets name="Brand") (find facets name="Availability") (find facets name="Model") (find facets name="Description")}}
+            <div class="webkite-result-foot">
+              <div class="webkite-prices">
+                {{~#facet name="Price"~}}
+                  <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
+                {{~/facet~}}
+              </div><!--
+           --><span class="webkite-details">
+                {{#any (find facets name="Brand") (find facets name="Availability") (find facets name="Model") (find facets name="Description")}}
+                  <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item" data-toggle="modal" data-speed="100ms">Details</a>
+                {{/any}}
+              </span>
+            </div>
+          {{/any}}
+        </div><!-- webkite-result-body -->
+          
+      </section>
+    {{~/each~}}
+  </div>
+{{else}}
+    {{>noresult}}
+{{/if}}
+
+{{>footer}}
