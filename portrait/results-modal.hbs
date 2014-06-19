@@ -67,14 +67,15 @@
           <p class="webkite-description">{{displayValue}}</p>
         {{~/facet}}
         
-        {{#unless (find facets name="Image URL")~}}
+        {{#if (find facets name="Image URL")~}}
+          {{#facet name="Model"~}}
+            <span class="webkite-model until-md">{{displayValue}}</span>
+            {{~/facet}}
+        {{else}}
           {{#facet name="Model"~}}
             <span class="webkite-model">{{displayValue}}</span>
-          {{~/facet}}
-        {{~/unless}}
-        {{#facet name="Model"~}}
-          <span class="webkite-model until-md">{{displayValue}}</span>
-        {{~/facet}}
+          {{~/facet}}        
+        {{/if}}
         
         {{#any (find facets name="Brand") (find facets name="Availability")}}
           <ul class="webkite-inline-filters">
