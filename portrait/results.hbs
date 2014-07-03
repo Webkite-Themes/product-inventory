@@ -50,7 +50,7 @@
             <p class="webkite-description">{{truncate displayValue 110 wrap=true}}</p>
           {{~/facet}}
           
-          {{#any (find facets name="Price") (find facets name="Brand") (find facets name="Availability") (find facets name="Model") (find facets name="Description")}}
+          {{#any (find facets name="Price") (find facets name="Brand") (find facets name="Availability") (find facets name="Model")}}
             <div class="webkite-result-foot">
               <div class="webkite-prices">
                 {{~#facet name="Price"~}}
@@ -58,11 +58,25 @@
                 {{~/facet~}}
               </div><!--
            --><span class="webkite-details">
-                {{#any (find facets name="Brand") (find facets name="Availability") (find facets name="Model") (find facets name="Description")}}
+                {{#any (find facets name="Brand") (find facets name="Availability") (find facets name="Model")}}
                   <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item" data-toggle="modal" data-speed="100ms">Details</a>
                 {{/any}}
               </span>
             </div>
+          {{else}}
+            {{#facet name="Description"}}
+              {{#unless (equals displayValue (truncate displayValue 110))}}
+                {{#with ../../this}}
+                  <div class="webkite-result-foot">
+                    <div class="webkite-prices">
+                    </div><!--
+                 --><span class="webkite-details">
+                      <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item" data-toggle="modal" data-speed="100ms">Details</a>                
+                    </span>
+                  </div>
+                {{/with}}
+              {{/unless}}
+            {{/facet}}
           {{/any}}
         </div><!-- webkite-result-body -->
           
