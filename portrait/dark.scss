@@ -213,18 +213,22 @@ $subduedText: rgba(255,255,255,0.65);
       display: inline-block;
       font: 700 1em/1.2 'Open Sans', 'Arial', sans-serif;
       margin: 0;
-      margin-right:-$mainGutter/4;
       padding: $mainGutter/4 $mainGutter $mainGutter/4 $mainGutter/4;
-      height: 2em;
       margin-left: -$mainGutter/4;
+      max-width:100%;
+      position:relative;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow:ellipsis;
       i{
         background: url("angle-dark.png") center center no-repeat;
-        display: inline-block;
+        position:absolute;
         height: 10px;
-        margin-left: $mainGutter/4;
-        margin-right:-3*$mainGutter/4;
+        margin-top: -5px;
         pointer-events: none;
         width: 10px;
+        top:50%;
+        right:$mainGutter/4;
         }
       &:hover{
         border: 1px solid $lighterOpacity;
@@ -397,9 +401,6 @@ $subduedText: rgba(255,255,255,0.65);
     width: 100%;
     padding-right: 0;
     }
-  .webkite-block ul li{
-    .webkite-toggle{width: auto;}
-    }
   .webkite-block .inline-filter-menu li a{
     max-width: 100%;
     width: auto;
@@ -411,9 +412,6 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 #webkite-results.sm{
-  .webkite-block ul li{
-    .webkite-toggle{width: auto;}
-    }
   .webkite-results-wrapper .webkite-result {
     width:50%;
     }
@@ -523,20 +521,6 @@ $subduedText: rgba(255,255,255,0.65);
             text-align:left;
             > .webkite-toggle{
               display:block;
-              width:auto;
-              margin:0;
-              margin-left:-$mainGutter/4;
-              position:relative;
-              height:auto;
-              overflow:hidden;
-              white-space:nowrap;
-              text-overflow:ellipsis;
-              i {
-                position:absolute;
-                margin:0;
-                top:8px;
-                right:6px;
-                }
               }
             }
           }
