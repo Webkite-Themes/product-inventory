@@ -2,6 +2,8 @@ theme:
   name: product-inventory-landscape
   
 settings:
+  embeddable:
+    true
   pagination:
     - 10
     - 25
