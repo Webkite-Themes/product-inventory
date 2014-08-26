@@ -626,6 +626,14 @@
   box-sizing: border-box;
   margin-left: -20px;
   vertical-align: top; }
+#webkite-results .webkite-group-name {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+  margin-bottom: 20px;
+  padding: 0 0 0 20px; }
 #webkite-results .webkite-result {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
