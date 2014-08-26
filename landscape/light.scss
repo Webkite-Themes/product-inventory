@@ -71,6 +71,18 @@ $subduedText: rgba(0,0,0,0.4);
   
 /************************************ LANDSCAPE RESULTS */
 #webkite-results{
+  .webkite-results-wrapper{
+    margin-bottom:$mainGutter;
+    border-bottom:1px solid $lighterOpacity;
+    }
+  .webkite-group-name{
+    color:$lightOpacity;
+    font-size:18px;
+    font-family:'Open Sans', 'Arial', sans-serif;
+    line-height:1em;
+    margin:0 0 $mainGutter;
+    padding:0;
+    }
   .webkite-result {
     padding-bottom:$mainGutter;
     margin-bottom:$mainGutter;
@@ -78,6 +90,7 @@ $subduedText: rgba(0,0,0,0.4);
     text-align: justify;
     position: relative;
     line-height:1.25;
+    &:last-child{border-bottom:none; margin-bottom:0;}
     }
   .webkite-image-wrapper {
     width:20%;
@@ -103,6 +116,7 @@ $subduedText: rgba(0,0,0,0.4);
     line-height:1.1;
     margin-bottom:$mainGutter/4;
     color:$subduedText;
+    &:empty{display:none;}
     .webkite-category + .webkite-subcategory::before {
       content:'>\0020';
       opacity:0.8;

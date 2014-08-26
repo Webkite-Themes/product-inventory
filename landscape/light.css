@@ -619,6 +619,16 @@
     width: 80%; }
 
 /************************************ LANDSCAPE RESULTS */
+#webkite-results .webkite-results-wrapper {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+#webkite-results .webkite-group-name {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  line-height: 1em;
+  margin: 0 0 20px;
+  padding: 0; }
 #webkite-results .webkite-result {
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -626,6 +636,9 @@
   text-align: justify;
   position: relative;
   line-height: 1.25; }
+  #webkite-results .webkite-result:last-child {
+    border-bottom: none;
+    margin-bottom: 0; }
 #webkite-results .webkite-image-wrapper {
   width: 20%;
   display: inline-block;
@@ -648,6 +661,8 @@
   line-height: 1.1;
   margin-bottom: 5px;
   color: rgba(0, 0, 0, 0.4); }
+  #webkite-results .webkite-categories:empty {
+    display: none; }
   #webkite-results .webkite-categories .webkite-category + .webkite-subcategory::before {
     content: '>\0020';
     opacity: 0.8; }
