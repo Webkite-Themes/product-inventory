@@ -1,16 +1,17 @@
 $colorVariant:dark;
+$themeName:product-inventory-portrait;
 $subduedText: rgba(255,255,255,0.65);
 
 //CALL UNIVERSALS
 @import '../globals/universals';
 
 /* RESET */
-#webkite-results{
+#webkite-results.#{$themeName}{
   @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
-#webkite-results{
+#webkite-results.#{$themeName}{
   background: $backgroundColor;
   border: 1px solid $lighterOpacity;
   @include roundedUp(10px);
@@ -28,7 +29,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /* TYPOGRAPHY */
-#webkite-results{
+#webkite-results.#{$themeName}{
   h1, h2, h3, h4{margin: 0;}
   h2{
     @include hyphenGreat;
@@ -43,7 +44,7 @@ $subduedText: rgba(255,255,255,0.65);
 @include universalStyles;
   
 /********************************************** BLOCKS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-block-group {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -71,7 +72,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /************************************ LANDSCAPE RESULTS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-results-wrapper {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -185,7 +186,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /************************************** INLINE FILTERS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-inline-filters {
     line-height:1.3;
     > li {
@@ -285,7 +286,7 @@ $subduedText: rgba(255,255,255,0.65);
 }
 
 /*************************************** MODALS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-item-details{
     @include boxedUp;
     position: fixed;
@@ -394,7 +395,7 @@ $subduedText: rgba(255,255,255,0.65);
 }
 
 /******************************************* NO RESULTS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   
   .webkite-no-results{
     padding: 0 0 $mainGutter;
@@ -405,7 +406,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /************************************** ELEMENT QUERIES */
-#webkite-results.xs{
+#webkite-results.#{$themeName}.xs{
   .webkite-block{
     width: 100%;
     padding-right: 0;
@@ -420,14 +421,14 @@ $subduedText: rgba(255,255,255,0.65);
   
   }
   
-#webkite-results.sm{
+#webkite-results.#{$themeName}.sm{
   .webkite-results-wrapper .webkite-result {
     width:50%;
     }
   }
 
 @media screen and (min-height: 680px){
-  #webkite-results.md, #webkite-results.sm{
+  #webkite-results.#{$themeName}.md, #webkite-results.#{$themeName}.sm{
     .webkite-modal-content{
       .webkite-inline-filters .inline-filter-menu{
         position:fixed;
@@ -440,7 +441,7 @@ $subduedText: rgba(255,255,255,0.65);
     }
 }
 @media screen and (min-width:0\0) {
-  #webkite-results.md, #webkite-results.sm{
+  #webkite-results.#{$themeName}.md, #webkite-results.#{$themeName}.sm{
     .webkite-modal-content{
       .webkite-inline-filters .inline-filter-menu{
         position:absolute;
@@ -455,7 +456,7 @@ $subduedText: rgba(255,255,255,0.65);
 /* modal sizings */
 @media screen and (max-width: 640px){
   //sm
-  #webkite-results{
+  #webkite-results.#{$themeName}{
     .webkite-item-details{width:100%; left:0; margin-left:0;}
     .webkite-modal-content{
       .webkite-result {
@@ -493,7 +494,7 @@ $subduedText: rgba(255,255,255,0.65);
 }
 @media screen and (max-width:470px){
   //xs
-  #webkite-results{
+  #webkite-results.#{$themeName}{
     .webkite-item-details{width:100%; left:0; margin-left:0;}
     .webkite-modal-content{
       .webkite-result {
@@ -544,7 +545,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
 }
 @media screen and (min-width:641px){
-  #webkite-results{
+  #webkite-results.#{$themeName}{
     .webkite-modal-content{
       .until-md {display:none!important;}
       .md-only {display:inline-block!important;}  
@@ -554,16 +555,16 @@ $subduedText: rgba(255,255,255,0.65);
 
 
 /*************************** DISPLAY RULES */
-#webkite-results.xs {
+#webkite-results.#{$themeName}.xs {
   .xs-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.sm {
+#webkite-results.#{$themeName}.sm {
   .sm-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.md {
+#webkite-results.#{$themeName}.md {
   .until-md {display:none;}
   }

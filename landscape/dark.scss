@@ -1,16 +1,17 @@
 $colorVariant:dark;
+$themeName:product-inventory-landscape;
 $subduedText: rgba(255,255,255,0.6);
 
 //CALL UNIVERSALS
 @import '../globals/universals';
 
 /* RESET */
-#webkite-results{
+#webkite-results.#{$themeName}{
   @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
-#webkite-results{
+#webkite-results.#{$themeName}{
   background: $backgroundColor;
   border: 1px solid $lighterOpacity;
   @include roundedUp(10px);
@@ -27,7 +28,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /* TYPOGRAPHY */
-#webkite-results{
+#webkite-results.#{$themeName}{
   h1, h2, h3, h4{margin: 0;}
   h2{
     @include hyphenGreat;
@@ -42,7 +43,7 @@ $subduedText: rgba(255,255,255,0.6);
 @include universalStyles;
   
 /********************************************** BLOCKS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-block-group {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -70,7 +71,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /************************************ LANDSCAPE RESULTS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-results-wrapper{
     margin-bottom:$mainGutter;
     border-bottom:1px solid $lighterOpacity;
@@ -179,7 +180,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /************************************** INLINE FILTERS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-inline-filters {
     line-height:1.2;
     }
@@ -259,7 +260,7 @@ $subduedText: rgba(255,255,255,0.6);
 }
 
 /******************************************* NO RESULTS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   
   .webkite-no-results{
     padding: 0 0 $mainGutter;
@@ -270,7 +271,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /************************************** ELEMENT QUERIES */
-#webkite-results.xs{
+#webkite-results.#{$themeName}.xs{
   .webkite-block{
     width: 100%;
     padding-right: 0;
@@ -315,7 +316,7 @@ $subduedText: rgba(255,255,255,0.6);
     }
   }
   
-#webkite-results.sm{
+#webkite-results.#{$themeName}.sm{
   .webkite-block-eighty {
     width:100%;
     }
@@ -356,7 +357,7 @@ $subduedText: rgba(255,255,255,0.6);
     .inline-filter-menu {left:1.5*$mainGutter;}
   }
 
-#webkite-results.md{
+#webkite-results.#{$themeName}.md{
   .webkite-inline-filters{
     > li{
       padding-top:$mainGutter/2;
@@ -374,16 +375,16 @@ $subduedText: rgba(255,255,255,0.6);
   }
 
 /*************************** DISPLAY RULES */
-#webkite-results.xs {
+#webkite-results.#{$themeName}.xs {
   .xs-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.sm {
+#webkite-results.#{$themeName}.sm {
   .sm-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.md {
+#webkite-results.#{$themeName}.md {
   .until-md {display:none;}
   }
