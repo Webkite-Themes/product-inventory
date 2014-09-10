@@ -6,12 +6,12 @@ $subduedText: rgba(255,255,255,0.6);
 @import '../globals/universals';
 
 /* RESET */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   background: $backgroundColor;
   border: 1px solid $lighterOpacity;
   @include roundedUp(10px);
@@ -28,7 +28,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /* TYPOGRAPHY */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   h1, h2, h3, h4{margin: 0;}
   h2{
     @include hyphenGreat;
@@ -43,7 +43,7 @@ $subduedText: rgba(255,255,255,0.6);
 @include universalStyles;
   
 /********************************************** BLOCKS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-block-group {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -71,7 +71,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /************************************ LANDSCAPE RESULTS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-results-wrapper{
     margin-bottom:$mainGutter;
     border-bottom:1px solid $lighterOpacity;
@@ -180,7 +180,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /************************************** INLINE FILTERS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-inline-filters {
     line-height:1.2;
     }
@@ -260,7 +260,7 @@ $subduedText: rgba(255,255,255,0.6);
 }
 
 /******************************************* NO RESULTS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   
   .webkite-no-results{
     padding: 0 0 $mainGutter;
@@ -271,7 +271,7 @@ $subduedText: rgba(255,255,255,0.6);
   }
   
 /************************************** ELEMENT QUERIES */
-#webkite-results.#{$themeName}.xs{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs{
   .webkite-block{
     width: 100%;
     padding-right: 0;
@@ -316,7 +316,7 @@ $subduedText: rgba(255,255,255,0.6);
     }
   }
   
-#webkite-results.#{$themeName}.sm{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
   .webkite-block-eighty {
     width:100%;
     }
@@ -357,7 +357,7 @@ $subduedText: rgba(255,255,255,0.6);
     .inline-filter-menu {left:1.5*$mainGutter;}
   }
 
-#webkite-results.#{$themeName}.md{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.md{
   .webkite-inline-filters{
     > li{
       padding-top:$mainGutter/2;
@@ -375,16 +375,16 @@ $subduedText: rgba(255,255,255,0.6);
   }
 
 /*************************** DISPLAY RULES */
-#webkite-results.#{$themeName}.xs {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs {
   .xs-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.#{$themeName}.sm {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm {
   .sm-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.#{$themeName}.md {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.md {
   .until-md {display:none;}
   }

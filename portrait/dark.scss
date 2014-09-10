@@ -6,12 +6,12 @@ $subduedText: rgba(255,255,255,0.65);
 @import '../globals/universals';
 
 /* RESET */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   background: $backgroundColor;
   border: 1px solid $lighterOpacity;
   @include roundedUp(10px);
@@ -29,7 +29,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /* TYPOGRAPHY */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   h1, h2, h3, h4{margin: 0;}
   h2{
     @include hyphenGreat;
@@ -44,7 +44,7 @@ $subduedText: rgba(255,255,255,0.65);
 @include universalStyles;
   
 /********************************************** BLOCKS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-block-group {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -72,7 +72,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /************************************ LANDSCAPE RESULTS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-results-wrapper {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -186,7 +186,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /************************************** INLINE FILTERS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-inline-filters {
     line-height:1.3;
     > li {
@@ -286,7 +286,7 @@ $subduedText: rgba(255,255,255,0.65);
 }
 
 /*************************************** MODALS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-item-details{
     @include boxedUp;
     position: fixed;
@@ -395,7 +395,7 @@ $subduedText: rgba(255,255,255,0.65);
 }
 
 /******************************************* NO RESULTS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   
   .webkite-no-results{
     padding: 0 0 $mainGutter;
@@ -406,7 +406,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
   
 /************************************** ELEMENT QUERIES */
-#webkite-results.#{$themeName}.xs{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs{
   .webkite-block{
     width: 100%;
     padding-right: 0;
@@ -421,14 +421,14 @@ $subduedText: rgba(255,255,255,0.65);
   
   }
   
-#webkite-results.#{$themeName}.sm{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
   .webkite-results-wrapper .webkite-result {
     width:50%;
     }
   }
 
 @media screen and (min-height: 680px){
-  #webkite-results.#{$themeName}.md, #webkite-results.#{$themeName}.sm{
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}.md, #webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
     .webkite-modal-content{
       .webkite-inline-filters .inline-filter-menu{
         position:fixed;
@@ -441,7 +441,7 @@ $subduedText: rgba(255,255,255,0.65);
     }
 }
 @media screen and (min-width:0\0) {
-  #webkite-results.#{$themeName}.md, #webkite-results.#{$themeName}.sm{
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}.md, #webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
     .webkite-modal-content{
       .webkite-inline-filters .inline-filter-menu{
         position:absolute;
@@ -456,7 +456,7 @@ $subduedText: rgba(255,255,255,0.65);
 /* modal sizings */
 @media screen and (max-width: 640px){
   //sm
-  #webkite-results.#{$themeName}{
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}{
     .webkite-item-details{width:100%; left:0; margin-left:0;}
     .webkite-modal-content{
       .webkite-result {
@@ -494,7 +494,7 @@ $subduedText: rgba(255,255,255,0.65);
 }
 @media screen and (max-width:470px){
   //xs
-  #webkite-results.#{$themeName}{
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}{
     .webkite-item-details{width:100%; left:0; margin-left:0;}
     .webkite-modal-content{
       .webkite-result {
@@ -545,7 +545,7 @@ $subduedText: rgba(255,255,255,0.65);
   }
 }
 @media screen and (min-width:641px){
-  #webkite-results.#{$themeName}{
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}{
     .webkite-modal-content{
       .until-md {display:none!important;}
       .md-only {display:inline-block!important;}  
@@ -555,16 +555,16 @@ $subduedText: rgba(255,255,255,0.65);
 
 
 /*************************** DISPLAY RULES */
-#webkite-results.#{$themeName}.xs {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs {
   .xs-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.#{$themeName}.sm {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm {
   .sm-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.#{$themeName}.md {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.md {
   .until-md {display:none;}
   }
