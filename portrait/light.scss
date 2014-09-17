@@ -290,10 +290,10 @@ $subduedText: rgba(0,0,0,0.4);
   .webkite-item-details{
     @include boxedUp;
     position: fixed;
-    width: 640px;
+    width: 680px;
     left:50%;
     top:0;
-    margin-left:-320px;
+    margin-left:-340px;
     padding: $mainGutter;
     z-index: 999999;
     }
@@ -319,14 +319,17 @@ $subduedText: rgba(0,0,0,0.4);
       }
     }
   .webkite-modal-content{
-    max-height:72vh;
+    max-height:650px;
     padding-right:$mainGutter/5*3;
     padding-left: $mainGutter/4;
+    padding-bottom:1px;
+    margin-bottom:-2px;
     overflow:hidden;
     overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
     .webkite-result {
       border:none;
-      padding:0;
+      padding:0 0 1px 0;
       margin-bottom:0;
       line-height:20px;
       width:auto;
@@ -429,8 +432,8 @@ $subduedText: rgba(0,0,0,0.4);
     }
   }
 
-@media screen and (min-height: 680px){
-  #webkite-results.#{$themeName}.webkite-#{$colorVariant}.md, #webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
+@media screen and (min-height: 720px){
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}{
     .webkite-modal-content{
       .webkite-inline-filters .inline-filter-menu{
         position:fixed;
@@ -443,7 +446,7 @@ $subduedText: rgba(0,0,0,0.4);
     }
 }
 @media screen and (min-width:0\0) {
-  #webkite-results.#{$themeName}.webkite-#{$colorVariant}.md, #webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant}{
     .webkite-modal-content{
       .webkite-inline-filters .inline-filter-menu{
         position:absolute;
@@ -456,7 +459,7 @@ $subduedText: rgba(0,0,0,0.4);
 }
 
 /* modal sizings */
-@media screen and (max-width: 640px){
+@media screen and (max-width: 680px){
   //sm
   #webkite-results.#{$themeName}.webkite-#{$colorVariant}{
     .webkite-item-details{width:100%; left:0; margin-left:0;}
@@ -555,7 +558,31 @@ $subduedText: rgba(0,0,0,0.4);
   }
 }
 
-
+@media screen and (max-height: 730px){
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant} .webkite-modal-content{
+    max-height:520px;
+    }
+}
+@media screen and (max-height: 600px){
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant} .webkite-modal-content{
+    max-height:420px;
+    }
+}
+@media screen and (max-height: 500px){
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant} .webkite-modal-content{
+    max-height:320px;
+    }
+}
+@media screen and (max-height: 400px){
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant} .webkite-modal-content{
+    max-height:220px;
+    }
+}
+@media screen and (max-height: 300px){
+  #webkite-results.#{$themeName}.webkite-#{$colorVariant} .webkite-modal-content{
+    max-height:180px;
+    }
+}
 
 /*************************** DISPLAY RULES */
 #webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs {
