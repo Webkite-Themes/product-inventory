@@ -91,6 +91,11 @@
 #webkite-results.product-inventory-portrait.webkite-light p, #webkite-results.product-inventory-portrait.webkite-light li {
   color: rgba(0, 0, 0, 0.6); }
 
+/******************************************** GENERAL */
+#webkite-results.product-inventory-portrait.webkite-light {
+  text-align: left;
+  direction: ltr; }
+
 /******************************************** NAVIGATIONALS */
 #webkite-results.product-inventory-portrait.webkite-light .webkite-results-header, #webkite-results.product-inventory-portrait.webkite-light .webkite-results-footer {
   text-align: justify;
